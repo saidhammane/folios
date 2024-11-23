@@ -1,14 +1,15 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\FolioController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('folio.index');
+Route::group([], function () {
+    Route::get('/', [FolioController::class, 'folioApp']);
+    
+    // Route::get('/home', [FolioController::class, 'welcome']);
 });
-Route::get('/home', function () {
-    return view('welcome');
-});
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -21,5 +22,3 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
-// require __DIR__.'/auth.php';
-// require __DIR__.'/auth.php';
