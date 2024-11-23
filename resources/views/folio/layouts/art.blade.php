@@ -45,7 +45,7 @@
                                     </div>
                                     <div class="art-buttons-frame">
                                         <!-- button -->
-                                        <a href="/folio/en/portfolio.php" class="art-btn art-btn-md"><span>Explore
+                                        <a href={{ route('portfolio') }} class="art-btn art-btn-md"><span>Explore
                                                 now</span></a>
                                     </div>
                                 </div>
@@ -118,7 +118,7 @@
                                     RESTful APIs, AJAX, and database integration to build efficient,
                                     scalable solutions.</div>
                                 <!-- button -->
-                                <div class="art-buttons-frame"><a href="/folio/en/contact.html"
+                                <div class="art-buttons-frame"><a href={{ route('contact') }}
                                         class="art-link art-color-link art-w-chevron">Order now</a>
                                 </div>
                             </div>
@@ -145,7 +145,7 @@
                                     solutions tailored to meet specific business needs, optimized for
                                     reliability and seamless enterprise integration.</div>
                                 <!-- button -->
-                                <div class="art-buttons-frame"><a href="/folio/en/contact.html"
+                                <div class="art-buttons-frame"><a href={{ route('contact') }}
                                         class="art-link art-color-link art-w-chevron">Order now</a>
                                 </div>
                             </div>
@@ -172,7 +172,7 @@
                                     writing, and Business Object integration for BI, streamlining
                                     business processes and enhancing operational insights.</div>
                                 <!-- button -->
-                                <div class="art-buttons-frame"><a href="/folio/en/contact.html"
+                                <div class="art-buttons-frame"><a href={{ route('contact') }}
                                         class="art-link art-color-link art-w-chevron">Order now</a>
                                 </div>
                             </div>
@@ -201,7 +201,7 @@
                                     and print to ensure a consistent, impactful presence across all
                                     channels.</div>
                                 <!-- button -->
-                                <div class="art-buttons-frame"><a href="/folio/en/contact.html"
+                                <div class="art-buttons-frame"><a href={{ route('contact') }}
                                         class="art-link art-color-link art-w-chevron">Order now</a>
                                 </div>
                             </div>
@@ -229,7 +229,7 @@
                                     their target audiences through effective digital strategies tailored
                                     to drive engagement and conversions.</div>
                                 <!-- button -->
-                                <div class="art-buttons-frame"><a href="/folio/en/contact.html"
+                                <div class="art-buttons-frame"><a href={{ route('contact') }}
                                         class="art-link art-color-link art-w-chevron">Order now</a>
                                 </div>
                             </div>
@@ -246,19 +246,7 @@
             </div>
             <!-- container end -->
 
-
-            <!-- container -->
-            <div class="container-fluid">
-
-                <!-- footer -->
-                <footer>
-                    <!-- copyright -->
-                    <div>© <span id="currentYear"></span> Said HAMMANE</div>
-                </footer>
-                <!-- footer end -->
-
-            </div>
-            <!-- container end -->
+            @include('folio.layouts.footer')
 
         </div>
         <!-- scroll frame end -->

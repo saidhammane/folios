@@ -5,9 +5,12 @@ use App\Http\Controllers\FolioController;
 use Illuminate\Support\Facades\Route;
 
 Route::group([], function () {
-    Route::get('/', [FolioController::class, 'folioApp']);
-    
-    // Route::get('/home', [FolioController::class, 'welcome']);
+    Route::get('/', [FolioController::class, 'app'])->name('app');
+    Route::get('/portfolio', [FolioController::class, 'portfolio'])->name('portfolio');
+    Route::get('/contact', [FolioController::class, 'contact'])->name('contact');
+    Route::get('/history', [FolioController::class, 'history'])->name('history');
+    Route::get('/blog', [FolioController::class, 'blog'])->name('blog');
+
 });
 
 
