@@ -22,6 +22,10 @@ class FolioController extends Controller
         return view('folio.pages.blog');
     }
 
+    public function blogDetail(){
+        return view('folio.pages.blogdetail');
+    }
+
     public function history(){
         return view('folio.pages.history');
     }
