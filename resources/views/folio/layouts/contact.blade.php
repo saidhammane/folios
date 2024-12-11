@@ -35,12 +35,20 @@
                                 <li>
                                     <h6>Country:</h6><span>Morocco</span>
                                 </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- contact card end -->
+                </div>
+                <!-- col end -->
+                <!-- col -->
+                <div class="col-lg-4">
+                    <!-- contact card -->
+                    <div class="art-a art-card">
+                        <div class="art-table p-15-15">
+                            <ul>
                                 <li>
-                                    <h6>City:</h6><span>Casablanca</span>
-                                </li>
-
-                                <li>
-                                    <h6>Streat:</h6><span>20 Dellbank Rd</span>
+                                    <h6>Email:</h6><span>said.hammane1@gmail.com</span>
                                 </li>
                             </ul>
                         </div>
@@ -55,34 +63,7 @@
                         <div class="art-table p-15-15">
                             <ul>
                                 <li>
-                                    <h6>Email:</h6><span>carter.inbox@mail.com</span>
-                                </li>
-                                <li>
-                                    <h6>Telegram:</h6><span>@arter</span>
-                                </li>
-                                <li>
-                                    <h6>Skype:</h6><span>Arter</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- contact card end -->
-                </div>
-                <!-- col end -->
-                <!-- col -->
-                <div class="col-lg-4">
-                    <!-- contact card -->
-                    <div class="art-a art-card">
-                        <div class="art-table p-15-15">
-                            <ul>
-                                <li>
-                                    <h6>Support service:</h6><span>+78 (098) 333 11 22</span>
-                                </li>
-                                <li>
-                                    <h6>Office:</h6><span>+78 (098) 326 11 22</span>
-                                </li>
-                                <li>
-                                    <h6>Personal:</h6><span>+78 (077) 114 26 53</span>
+                                    <h6>Personal:</h6><span>+212684756919</span>
                                 </li>
                             </ul>
                         </div>
@@ -110,7 +91,7 @@
                     <div class="art-a art-card">
 
                         <!-- contact form -->
-                        <form id="form" class="art-contact-form">
+                        <form  class="art-contact-form" action="send-mail"> 
                             <!-- form field -->
                             <div class="art-form-field">
                                 <!-- name input -->
@@ -127,6 +108,15 @@
                                     placeholder="Email" required>
                                 <!-- label -->
                                 <label for="email"><i class="fas fa-at"></i></label>
+                            </div>
+                            <!-- form field end -->
+                            <!-- form field -->
+                            <div class="art-form-field">
+                                <!-- name input -->
+                                <input id="subject" name="subject" class="art-input" type="text" placeholder="Subject"
+                                    required>
+                                <!-- label -->
+                                <label for="subject"><i class="fas fa-earth"></i></label>
                             </div>
                             <!-- form field end -->
                             <!-- form field -->
@@ -159,45 +149,6 @@
         </div>
         <!-- container end -->
 
-        <!-- container -->
-        <div class="container-fluid">
-
-            <!-- row -->
-            <div class="row">
-
-                <!-- col -->
-                <div class="col-6 col-lg-3">
-                    <!-- brand -->
-                    <img class="art-brand" src="img/brands/1.png" alt="brand">
-                </div>
-                <!-- col end -->
-
-                <!-- col -->
-                <div class="col-6 col-lg-3">
-                    <!-- brand -->
-                    <img class="art-brand" src="img/brands/2.png" alt="brand">
-                </div>
-                <!-- col end -->
-
-                <!-- col -->
-                <div class="col-6 col-lg-3">
-                    <!-- brand -->
-                    <img class="art-brand" src="img/brands/3.png" alt="brand">
-                </div>
-                <!-- col end -->
-
-                <!-- col -->
-                <div class="col-6 col-lg-3">
-                    <!-- brand -->
-                    <img class="art-brand" src="img/brands/1.png" alt="brand">
-                </div>
-                <!-- col end -->
-
-            </div>
-            <!-- row end -->
-
-        </div>
-        <!-- container end -->
 
         @include('folio.layouts.footer')
 

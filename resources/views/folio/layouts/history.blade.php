@@ -33,19 +33,16 @@
                             <div class="art-a art-timeline-content">
                                 <div class="art-card-header">
                                     <div class="art-left-side">
-                                        <h5>University of Casablanca</h5>
-                                        <div class="art-el-suptitle mb-15">Student</div>
+                                        <h5>Higher Institute of Engineering & Business (ISGA) Casablanca</h5>
+                                        <div class="art-el-suptitle mb-15">State Engineer Diploma (in progress)</div>
                                     </div>
                                     <div class="art-right-side">
-                                        <span class="art-date">jan 2018 - may 2024</span>
+                                        <span class="art-date">Since September 2024</span>
                                     </div>
                                 </div>
 
-                                <p>Dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum
-                                    aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste
-                                    voluptatibus minus veritatis qui ut.</p>
-                                <a data-fancybox="diplome" href="files/certificate.jpg"
-                                    class="art-link art-color-link art-w-chevron">Diplome</a>
+                                <p>Currently pursuing an advanced degree focusing on innovative technologies, including
+                                    AI and data analysis, to solve complex business problems</p>
                             </div>
                         </div>
 
@@ -56,15 +53,15 @@
                             <div class="art-a art-timeline-content">
                                 <div class="art-card-header">
                                     <div class="art-left-side">
-                                        <h5>Arter design school</h5>
-                                        <div class="art-el-suptitle mb-15">Student</div>
+                                        <h5>FSJES Ain Sebaâ, Hassan II University Casablanca, Morocco</h5>
+                                        <div class="art-el-suptitle mb-15">Professional Bachelor’s Degree</div>
                                     </div>
                                     <div class="art-right-side">
-                                        <span class="art-date">jan 2018 - may 2024</span>
+                                        <span class="art-date">From 2021 to 2022</span>
                                     </div>
                                 </div>
-                                <div>Consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi
-                                    placeat iure tempora laudantium ipsa ad debitis unde?</div>
+                                <div>Completed a program blending IT and business management, emphasizing the design and
+                                    implementation of IT solutions for enterprises.</div>
                             </div>
                         </div>
 
@@ -75,43 +72,19 @@
                             <div class="art-a art-timeline-content">
                                 <div class="art-card-header">
                                     <div class="art-left-side">
-                                        <h5>Web developer courses</h5>
-                                        <div class="art-el-suptitle mb-15">Student</div>
+                                        <h5>Moulay Ismail High School Meknes, Morocco</h5>
+                                        <div class="art-el-suptitle mb-15">Advanced Technician Certificate (BTS)</div>
                                     </div>
                                     <div class="art-right-side">
-                                        <span class="art-date">jan 2018 - may 2024</span>
+                                        <span class="art-date">From 2019 to 2021</span>
                                     </div>
                                 </div>
-                                <p>Dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis
-                                    unde? Iste voluptatibus minus veritatis qui ut.</p>
-                                <a data-fancybox="diplome" href="files/certificate.jpg"
-                                    class="art-link art-color-link art-w-chevron">Licence</a>
+                                <p>Gained practical skills in IT system development, including web and desktop
+                                    application development, and database management.</p>
+
                             </div>
 
                         </div>
-
-                        <div class="art-timeline-item">
-                            <div class="art-timeline-mark-light"></div>
-                            <div class="art-timeline-mark"></div>
-
-                            <div class="art-a art-timeline-content">
-                                <div class="art-card-header">
-                                    <div class="art-left-side">
-                                        <h5>Academy of Art University</h5>
-                                        <div class="art-el-suptitle mb-15">Student</div>
-                                    </div>
-                                    <div class="art-right-side">
-                                        <span class="art-date">jan 2018 - may 2024</span>
-                                    </div>
-                                </div>
-                                <p>Ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident
-                                    rerum.</p>
-                                <a data-fancybox="diplome" href="files/certificate.jpg"
-                                    class="art-link art-color-link art-w-chevron">Certificate</a>
-                            </div>
-
-                        </div>
-
                     </div>
                     <!-- timeline end -->
 
@@ -135,229 +108,125 @@
                         <div class="art-timeline-item">
                             <div class="art-timeline-mark-light"></div>
                             <div class="art-timeline-mark"></div>
-
-
                             <div class="art-a art-timeline-content">
                                 <div class="art-card-header">
                                     <div class="art-left-side">
-                                        <h5>Envato</h5>
-                                        <div class="art-el-suptitle mb-15">Template author</div>
+                                        <h5>AUTOPLUS, Morocco</h5>
+                                        <div class="art-el-suptitle mb-15">SAP Development and Support Specialist</div>
                                     </div>
                                     <div class="art-right-side">
-                                        <span class="art-date">jan 2018 - may 2024</span>
+                                        <span class="art-date">Since January 2024</span>
                                     </div>
                                 </div>
-                                <p>Placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus
-                                    veritatis qui ut.</p>
+                                <p>In this role, I manage the migration and maintenance of SAP Business One modules,
+                                    ensuring the system's reliability and performance. Additionally, I develop
+                                    customized internal solutions to meet business needs, using Laravel for back-end
+                                    development and SQL Server for database management. My work involves integrating
+                                    modern technologies to optimize the company's operations.</p>
                             </div>
                         </div>
 
                         <div class="art-timeline-item">
                             <div class="art-timeline-mark-light"></div>
                             <div class="art-timeline-mark"></div>
-
-
                             <div class="art-a art-timeline-content">
                                 <div class="art-card-header">
                                     <div class="art-left-side">
-                                        <h5>Themeforest</h5>
-                                        <div class="art-el-suptitle mb-15">Template author</div>
+                                        <h5>KSoft, Morocco</h5>
+                                        <div class="art-el-suptitle mb-15">.Net Developer</div>
                                     </div>
                                     <div class="art-right-side">
-                                        <span class="art-date">jan 2018 - may 2024</span>
+                                        <span class="art-date">May 2023 – August 2023</span>
                                     </div>
                                 </div>
-                                <p>Adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure
-                                    tempora laudantium ipsa ad debitis unde?</p>
-                                <a data-fancybox="recommendation" href="#art-recomendation-popup-1"
-                                    class="art-link art-color-link art-w-chevron">Recommendation</a>
+                                <p>I contributed to the redesign of a desktop application, transitioning it into a
+                                    modern web-based solution. This involved using C# and the .Net Framework to enhance
+                                    functionality and improve user experience. My expertise in ASP.NET and DevExpress
+                                    enabled me to deliver a responsive and efficient application.</p>
                             </div>
-
-                            <!-- popup -->
-                            <div class="art-recomendation-popup" style="display: none;" id="art-recomendation-popup-1">
-
-                                <!-- testimonial -->
-                                <div class="art-a art-testimonial">
-                                    <!-- testimonial body -->
-                                    <div class="testimonial-body">
-                                        <!-- photo -->
-                                        <img class="art-testimonial-face" src="img/testimonials/face-3.jpg"
-                                            alt="face">
-                                        <!-- name -->
-                                        <h5>Paul Trueman</h5>
-                                        <div class="art-el-suptitle mb-15">Template author</div>
-                                        <!-- text -->
-                                        <div class="mb-15">Working with Artur has been a pleasure. Better yet - I
-                                            alerted them of a minor issue before going to sleep. The issue was fixed the
-                                            next morning. I couldn't ask for better support. Thank you Artur!
-                                            This is easily a 5 star freelancer.</div>
-                                    </div>
-                                    <!-- testimonial body end -->
-                                    <!-- testimonial footer -->
-                                    <div class="art-testimonial-footer">
-                                        <div class="art-left-side">
-                                            <!-- star rate -->
-                                            <ul class="art-star-rate">
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
-                                            <!-- star rate end -->
-                                        </div>
-                                        <div class="art-right-side">
-
-                                        </div>
-                                    </div>
-                                    <!-- testimonial footer end -->
-                                </div>
-                                <!-- testimonial end -->
-
-                            </div>
-                            <!-- popup end -->
-
                         </div>
 
                         <div class="art-timeline-item">
                             <div class="art-timeline-mark-light"></div>
                             <div class="art-timeline-mark"></div>
-
                             <div class="art-a art-timeline-content">
                                 <div class="art-card-header">
                                     <div class="art-left-side">
-                                        <h5>Envato market</h5>
-                                        <div class="art-el-suptitle mb-15">Template author</div>
+                                        <h5>On Wave Group, USA</h5>
+                                        <div class="art-el-suptitle mb-15">Full Stack Web Developer – Freelancer</div>
                                     </div>
                                     <div class="art-right-side">
-                                        <span class="art-date">jan 2018 - may 2024</span>
+                                        <span class="art-date">February 2023 – April 2023</span>
                                     </div>
                                 </div>
-                                <p>Consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque
-                                    asperiores voluptatibus cupiditate error assumenda delectus odit similique earum
-                                    voluptatem doloremque dolorem
-                                    ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio
-                                    natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis
-                                    enim amet quae quasi repudiandae sed quod veniam
-                                    dolore
-                                    possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut
-                                    adipisci.</p>
-                                <a data-fancybox="recommendation" href="#art-recomendation-popup-2"
-                                    class="art-link art-color-link art-w-chevron">Recommendation</a>
+                                <p>As a freelancer, I designed and developed a SaaS solution tailored to client
+                                    requirements. This included creating a user-friendly interface and robust backend
+                                    using technologies like HTML, CSS, JavaScript, Node.js, and MySQL. The project
+                                    demonstrated my ability to deliver complete end-to-end solutions remotely.</p>
                             </div>
-
-                            <!-- popup -->
-                            <div class="art-recomendation-popup" style="display: none;"
-                                id="art-recomendation-popup-2">
-
-                                <!-- testimonial -->
-                                <div class="art-a art-testimonial">
-                                    <!-- testimonial body -->
-                                    <div class="testimonial-body">
-                                        <!-- photo -->
-                                        <img class="art-testimonial-face" src="img/testimonials/face-4.jpg"
-                                            alt="face">
-                                        <!-- name -->
-                                        <h5>Paul Trueman</h5>
-                                        <div class="art-el-suptitle mb-15">Template author</div>
-                                        <!-- text -->
-                                        <div class="mb-15">Working with Artur has been a pleasure. Better yet - I
-                                            alerted them of a minor issue before going to sleep. The issue was fixed the
-                                            next morning. I couldn't ask for better support. Thank you Artur!
-                                            This is easily a 5 star freelancer.</div>
-                                    </div>
-                                    <!-- testimonial body end -->
-                                    <!-- testimonial footer -->
-                                    <div class="art-testimonial-footer">
-                                        <div class="art-left-side">
-                                            <!-- star rate -->
-                                            <ul class="art-star-rate">
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
-                                            <!-- star rate end -->
-                                        </div>
-                                        <div class="art-right-side">
-
-                                        </div>
-                                    </div>
-                                    <!-- testimonial footer end -->
-                                </div>
-                                <!-- testimonial end -->
-
-                            </div>
-                            <!-- popup end -->
-
                         </div>
 
                         <div class="art-timeline-item">
                             <div class="art-timeline-mark-light"></div>
                             <div class="art-timeline-mark"></div>
-
                             <div class="art-a art-timeline-content">
                                 <div class="art-card-header">
                                     <div class="art-left-side">
-                                        <h5>SoftService company</h5>
-                                        <div class="art-el-suptitle mb-15">Template author</div>
+                                        <h5>MDCALLCENTER, Morocco</h5>
+                                        <div class="art-el-suptitle mb-15">Laravel Developer</div>
                                     </div>
                                     <div class="art-right-side">
-                                        <span class="art-date">jan 2018 - tonight</span>
+                                        <span class="art-date">February 2023 – April 2023</span>
                                     </div>
                                 </div>
-                                <p>Dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.
-                                </p>
-                                <a data-fancybox="recommendation" href="#art-recomendation-popup-3"
-                                    class="art-link art-color-link art-w-chevron">Recommendation</a>
+                                <p>I played a key role in developing a SaaS solution for the company, focusing on
+                                    creating a scalable and efficient system. Using Laravel, I implemented advanced
+                                    features and ensured seamless integration with other tools. My responsibilities also
+                                    included front-end development with HTML, CSS, and JavaScript.</p>
                             </div>
+                        </div>
 
-                            <!-- popup -->
-                            <div class="art-recomendation-popup" style="display: none;"
-                                id="art-recomendation-popup-3">
-
-                                <!-- testimonial -->
-                                <div class="art-a art-testimonial">
-                                    <!-- testimonial body -->
-                                    <div class="testimonial-body">
-                                        <!-- photo -->
-                                        <img class="art-testimonial-face" src="img/testimonials/face-2.jpg"
-                                            alt="face">
-                                        <!-- name -->
-                                        <h5>Paul Trueman</h5>
-                                        <div class="art-el-suptitle mb-15">Template author</div>
-                                        <!-- text -->
-                                        <div class="mb-15">Working with Artur has been a pleasure. Better yet - I
-                                            alerted them of a minor issue before going to sleep. The issue was fixed the
-                                            next morning. I couldn't ask for better support. Thank you Artur!
-                                            This is easily a 5 star freelancer.</div>
+                        <div class="art-timeline-item">
+                            <div class="art-timeline-mark-light"></div>
+                            <div class="art-timeline-mark"></div>
+                            <div class="art-a art-timeline-content">
+                                <div class="art-card-header">
+                                    <div class="art-left-side">
+                                        <h5>KSoft, Morocco</h5>
+                                        <div class="art-el-suptitle mb-15">.Net Developer (End-of-Studies Internship –
+                                            Master’s Degree)</div>
                                     </div>
-                                    <!-- testimonial body end -->
-                                    <!-- testimonial footer -->
-                                    <div class="art-testimonial-footer">
-                                        <div class="art-left-side">
-                                            <!-- star rate -->
-                                            <ul class="art-star-rate">
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li class="art-empty-item"><i class="fas fa-star"></i></li>
-                                            </ul>
-                                            <!-- star rate end -->
-                                        </div>
-                                        <div class="art-right-side">
-
-                                        </div>
+                                    <div class="art-right-side">
+                                        <span class="art-date">May 2022 – July 2022</span>
                                     </div>
-                                    <!-- testimonial footer end -->
                                 </div>
-                                <!-- testimonial end -->
-
+                                <p>During this internship, I automated internal data processing systems to improve
+                                    operational efficiency. Leveraging the .Net Framework and Windows Server, I
+                                    implemented solutions that streamlined data handling, contributing to the company's
+                                    digital transformation efforts.</p>
                             </div>
-                            <!-- popup end -->
+                        </div>
 
+
+                        <div class="art-timeline-item">
+                            <div class="art-timeline-mark-light"></div>
+                            <div class="art-timeline-mark"></div>
+                            <div class="art-a art-timeline-content">
+                                <div class="art-card-header">
+                                    <div class="art-left-side">
+                                        <h5>SIRWAH, Morocco</h5>
+                                        <div class="art-el-suptitle mb-15">.Net Developer (End-of-Studies Internship –
+                                            BTS)</div>
+                                    </div>
+                                    <div class="art-right-side">
+                                        <span class="art-date">May 2022 – July 2022</span>
+                                    </div>
+                                </div>
+                                <p>I developed a desktop application for tracking invoices related to Sage100c. This
+                                    project required strong knowledge of the .Net Framework and SQL Server to create a
+                                    reliable and user-friendly tool that improved the company's financial tracking
+                                    processes.</p>
+                            </div>
                         </div>
 
                     </div>
@@ -374,7 +243,7 @@
 
         <!-- container -->
         <div class="container-fluid">
-            @include('folio.layouts.footer')    
+            @include('folio.layouts.footer')
         </div>
         <!-- container end -->
 

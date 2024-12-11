@@ -29,5 +29,7 @@ class FolioController extends Controller
     public function history(){
         return view('folio.pages.history');
     }
-
+    public function mail(){
+        return view('folio.pages.mail');
+    }
 }

@@ -254,7 +254,7 @@ $(function() {
   $("#form").submit(function() {
     $.ajax({
       type: "POST",
-      url: "mail.php",
+      url: "/mail",
       data: $(this).serialize()
     }).done(function() {
 
@@ -274,6 +274,7 @@ $(function() {
           height: '45px',
         })
     });
+    console.log(data)
     return false;
   });
 

@@ -222,12 +222,6 @@
                           <!-- social link -->
                           <a target="_blank" href="https://saidhammane.cloud/"><i class="fas fa-globe"></i></i></a>
                           <!-- social link -->
-                          <a target="_blank" href="https://www.facebook.com/hamm.said.33/"><i
-                                  class="fab fa-facebook"></i></a>
-                          <!-- social link -->
-                          <a target="_blank" href="https://www.instagram.com/said.hammane/"><i
-                                  class="fab fa-instagram"></i></a>
-                          <!-- social link -->
                           <a target="_blank" href="https://x.com/overload0x"><i class="fab fa-twitter"></i></a>
                       </div>
                       <!-- sidebar social end -->
