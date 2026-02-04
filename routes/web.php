@@ -12,7 +12,7 @@ Route::group([], function () {
     Route::get('/history', [FolioController::class, 'history'])->name('history');
     Route::get('/blog', [FolioController::class, 'blog'])->name('blog');
     
-    Route::get('send-mail', [MailController::class, 'submitForm']);
+    Route::post('send-mail', [MailController::class, 'submitForm'])->name('send-mail');
 
 });
 

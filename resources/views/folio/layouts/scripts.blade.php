@@ -26,3 +26,73 @@
     <script>
         document.getElementById("currentYear").textContent = new Date().getFullYear();
     </script>
+    <!-- sweetalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        (function () {
+            const form = document.querySelector('.art-contact-form[data-ajax="true"]');
+            if (!form) return;
+
+            const submitBtn = form.querySelector('.art-submit');
+            const btnText = submitBtn.querySelector('.btn-text');
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                submitBtn.classList.add('is-loading');
+                submitBtn.setAttribute('disabled', 'disabled');
+                if (btnText) btnText.textContent = 'Sending...';
+
+                try {
+                    const formData = new FormData(form);
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        headers: {
+                            'X-Requested-With': 'XMLHttpRequest',
+                            'Accept': 'application/json',
+                            'X-CSRF-TOKEN': form.querySelector('input[name="_token"]').value
+                        },
+                        body: formData
+                    });
+
+                    if (response.ok) {
+                        form.reset();
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Message sent',
+                            text: 'Thank you! I will get back to you soon.'
+                        });
+                        return;
+                    }
+
+                    if (response.status === 422) {
+                        const data = await response.json();
+                        const messages = Object.values(data.errors || {}).flat().join('\n');
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Validation error',
+                            text: messages || 'Please check your input and try again.'
+                        });
+                        return;
+                    }
+
+                    const errorText = await response.text();
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Send failed',
+                        text: errorText || 'Something went wrong. Please try again.'
+                    });
+                } catch (err) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Network error',
+                        text: 'Could not send your message. Please try again.'
+                    });
+                } finally {
+                    submitBtn.classList.remove('is-loading');
+                    submitBtn.removeAttribute('disabled');
+                    if (btnText) btnText.textContent = 'Send message';
+                }
+            });
+        })();
+    </script>

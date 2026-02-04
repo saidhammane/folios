@@ -240,6 +240,33 @@
                     </div>
                     <!-- col end -->
 
+                    <!-- col -->
+                    <div class="col-lg-4 col-md-6">
+
+                        <!-- service -->
+                        <div class="art-a art-service-icon-box">
+                            <!-- service content -->
+                            <div class="art-service-ib-content">
+                                <!-- title -->
+                                <h5 class="mb-15">Power BI</h5>
+                                <!-- text -->
+                                <div class="mb-15">Developing data-driven advertising campaigns
+                                    focused
+                                    on SEO, social media marketing, Google Ads, and Facebook Ads. My
+                                    approach maximizes brand reach and ROI by connecting businesses with
+                                    their target audiences through effective digital strategies tailored
+                                    to drive engagement and conversions.</div>
+                                <!-- button -->
+                                <div class="art-buttons-frame"><a href={{ route('contact') }}
+                                        class="art-link art-color-link art-w-chevron">Order now</a>
+                                </div>
+                            </div>
+                            <!-- service content end -->
+                        </div>
+                        <!-- service end -->
+
+                    </div>
+                    <!-- col end -->
                 </div>
                 <!-- row end -->
 
@@ -253,6 +280,6 @@
 
     </div>
     <!-- swup container end -->
-
+hi
 </div>
 <!-- content end -->

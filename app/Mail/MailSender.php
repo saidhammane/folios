@@ -29,14 +29,15 @@ class MailSender extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Folio Contact Form Submission',
+            subject: 'Portfolio Contact Message',
         );
     }
 
     public function build()
     {
         return $this->view('folio.pages.mail')
-            ->subject('New Contact Form Submission');
+            ->with(['mailData' => $this->mailData])
+            ->subject('Portfolio Contact Message');
     }
 
     /**

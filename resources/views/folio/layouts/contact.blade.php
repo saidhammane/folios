@@ -91,7 +91,9 @@
                     <div class="art-a art-card">
 
                         <!-- contact form -->
-                        <form  class="art-contact-form" action="send-mail"> 
+                        <form class="art-contact-form" method="POST" action="{{ route('send-mail') }}"
+                            data-ajax="true">
+                            @csrf
                             <!-- form field -->
                             <div class="art-form-field">
                                 <!-- name input -->
@@ -122,15 +124,18 @@
                             <!-- form field -->
                             <div class="art-form-field">
                                 <!-- message textarea -->
-                                <textarea id="message" name="text" class="art-input" placeholder="Message" required></textarea>
+                                <textarea id="message" name="message" class="art-input" placeholder="Message"
+                                    required></textarea>
                                 <!-- label -->
                                 <label for="message"><i class="far fa-envelope"></i></label>
                             </div>
                             <!-- form field end -->
                             <!-- button -->
                             <div class="art-submit-frame">
-                                <button class="art-btn art-btn-md art-submit" type="submit"><span>Send
-                                        message</span></button>
+                                <button class="art-btn art-btn-md art-submit" type="submit">
+                                    <span class="btn-text">Send message</span>
+                                    <span class="btn-loader" aria-hidden="true"></span>
+                                </button>
                                 <!-- success -->
                                 <div class="art-success">Success <i class="fas fa-check"></i></div>
                             </div>
@@ -157,3 +162,35 @@
 
 </div>
 <!-- swup container end -->
+
+<style>
+    .art-submit {
+        position: relative;
+    }
+
+    .art-submit.is-loading {
+        pointer-events: none;
+        opacity: 0.85;
+    }
+
+    .art-submit .btn-loader {
+        display: none;
+        width: 14px;
+        height: 14px;
+        margin-left: 10px;
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        border-top-color: #fff;
+        border-radius: 50%;
+        animation: btnSpin 0.8s linear infinite;
+    }
+
+    .art-submit.is-loading .btn-loader {
+        display: inline-block;
+    }
+
+    @keyframes btnSpin {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+</style>

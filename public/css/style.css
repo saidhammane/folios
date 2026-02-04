@@ -1132,6 +1132,9 @@ info bar
   position: relative;
   left: 45% !important;
 }
+.art-info-bar .art-lang-skills .art-lang-skills-item .art-cirkle-progress.no-text .progressbar-text {
+  display: none;
+}
 .art-info-bar .art-lang-skills .art-lang-skills-item .art-cirkle-progress .progressbar-text:after {
   content: '%';
   position: absolute;
@@ -1158,6 +1161,9 @@ info bar
   top: -6px !important;
   font-size: 11px;
   color: #8c8c8e !important;
+}
+.art-info-bar .art-hard-skills .art-hard-skills-item .art-line-progress .progressbar-text {
+  display: none;
 }
 .art-info-bar .art-knowledge-list {
   padding-left: 0;

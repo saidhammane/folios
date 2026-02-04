@@ -32,9 +32,13 @@
                           </div>
                           <!-- avatar end -->
                           <!-- name -->
-                          <h5 class="art-name mb-10"><a href="/folio/en/home.html">Said HAMMANE</a></h5>
+                          <h5 class="art-name mb-10">
+                              <a href="/folio/en/home.html">{{ $profile?->name ?? 'Said HAMMANE' }}</a>
+                          </h5>
                           <!-- post -->
-                          <div class="art-sm-text">Software engineer <br>Support SAP </div>
+                          <div class="art-sm-text" style="line-height: 1.35;">
+                              Data Analyst
+                          </div>
                       </div>
                       <!-- info bar header end -->
 
@@ -47,15 +51,15 @@
                               <ul>
                                   <!-- country -->
                                   <li>
-                                      <h6>Residence:</h6><span>Morocco</span>
+                                      <h6>Residence:</h6><span>{{ $profile?->residence ?? 'Morocco' }}</span>
                                   </li>
                                   <!-- city -->
                                   <li>
-                                      <h6>City:</h6><span>CASABLANCA</span>
+                                      <h6>City:</h6><span>{{ $profile?->city ?? 'CASABLANCA' }}</span>
                                   </li>
                                   <!-- age -->
                                   <li>
-                                      <h6>Age:</h6><span>24</span>
+                                      <h6>Age:</h6><span>{{ $profile?->age ?? '24' }}</span>
                                   </li>
                               </ul>
                           </div>
@@ -64,117 +68,30 @@
                           <!-- divider -->
                           <div class="art-ls-divider"></div>
 
-                          <!-- language skills -->
-                          <div class="art-lang-skills p-30-15">
-
-                              <!-- skill -->
-                              <div class="art-lang-skills-item">
-                                  <div id="circleprog1" class="art-cirkle-progress"></div>
-                                  <!-- title -->
-                                  <h6>Arabic</h6>
-                              </div>
-                              <!-- skill end -->
-
-                              <!-- skill -->
-                              <div class="art-lang-skills-item">
-                                  <div id="circleprog2" class="art-cirkle-progress"></div>
-                                  <!-- title -->
-                                  <h6>English</h6>
-                              </div>
-                              <!-- skill end -->
-
-                              <!-- skill -->
-                              <div class="art-lang-skills-item">
-                                  <div id="circleprog3" class="art-cirkle-progress"></div>
-                                  <!-- title -->
-                                  <h6>French</h6>
-                              </div>
-                              <!-- skill end -->
-
-                          </div>
-                          <!-- language skills end -->
-
-                          <!-- divider -->
-                          <div class="art-ls-divider"></div>
+                          <!-- language skills removed -->
 
                           <!-- hard skills -->
                           <div class="art-hard-skills p-30-15">
-
-                              <!-- skill -->
                               <div class="art-hard-skills-item">
-                                  <div class="art-skill-heading">
-                                      <!-- title -->
-                                      <h6>Web</h6>
-                                  </div>
-                                  <!-- progressbar frame -->
-                                  <div class="art-line-progress">
-                                      <!-- progressbar -->
-                                      <div id="lineprog1"></div>
-                                  </div>
-                                  <!-- progressbar frame end -->
+                                  <div class="art-skill-heading"><h6>Business Intelligence (Power BI)</h6></div>
+                                  <div class="art-line-progress" data-progress="0.9"></div>
                               </div>
-                              <!-- skill end -->
-
-                              <!-- skill -->
                               <div class="art-hard-skills-item">
-                                  <div class="art-skill-heading">
-                                      <!-- title -->
-                                      <h6>Desktop</h6>
-                                  </div>
-                                  <!-- progressbar frame -->
-                                  <div class="art-line-progress">
-                                      <!-- progressbar -->
-                                      <div id="lineprog2"></div>
-                                  </div>
-                                  <!-- progressbar frame end -->
+                                  <div class="art-skill-heading"><h6>Data & Reporting (SQL + Excel)</h6></div>
+                                  <div class="art-line-progress" data-progress="0.88"></div>
                               </div>
-                              <!-- skill end -->
-
-                              <!-- skill -->
                               <div class="art-hard-skills-item">
-                                  <div class="art-skill-heading">
-                                      <!-- title -->
-                                      <h6>ERPs</h6>
-                                  </div>
-                                  <!-- progressbar frame -->
-                                  <div class="art-line-progress">
-                                      <!-- progressbar -->
-                                      <div id="lineprog3"></div>
-                                  </div>
-                                  <!-- progressbar frame end -->
+                                  <div class="art-skill-heading"><h6>Data Modeling & Metrics</h6></div>
+                                  <div class="art-line-progress" data-progress="0.82"></div>
                               </div>
-                              <!-- skill end -->
-
-                              <!-- skill -->
                               <div class="art-hard-skills-item">
-                                  <div class="art-skill-heading">
-                                      <!-- title -->
-                                      <h6>CMS</h6>
-                                  </div>
-                                  <!-- progressbar frame -->
-                                  <div class="art-line-progress">
-                                      <!-- progressbar -->
-                                      <div id="lineprog4"></div>
-                                  </div>
-                                  <!-- progressbar frame end -->
+                                  <div class="art-skill-heading"><h6>Automation & Data Pipelines (Python)</h6></div>
+                                  <div class="art-line-progress" data-progress="0.8"></div>
                               </div>
-                              <!-- skill end -->
-
-                              <!-- skill -->
                               <div class="art-hard-skills-item">
-                                  <div class="art-skill-heading">
-                                      <!-- title -->
-                                      <h6>Databases</h6>
-                                  </div>
-                                  <!-- progressbar frame -->
-                                  <div class="art-line-progress">
-                                      <!-- progressbar -->
-                                      <div id="lineprog5"></div>
-                                  </div>
-                                  <!-- progressbar frame end -->
+                                  <div class="art-skill-heading"><h6>Web Dashboards (React)</h6></div>
+                                  <div class="art-line-progress" data-progress="0.7"></div>
                               </div>
-                              <!-- skill end -->
-
                           </div>
                           <!-- language skills end -->
 
@@ -183,18 +100,9 @@
 
                           <!-- knowledge list -->
                           <ul class="art-knowledge-list p-15-0">
-                              <!-- list item -->
-                              <li>Reactjs, ASP.NET, Nodejs, Laravel</li>
-                              <!-- list item -->
-                              <li>.Net Framework, DevExpress</li>
-                              <!-- list item -->
-                              <li>SAP, Sage</li>
-                              <!-- list item -->
-                              <li>WordPress, Shopify</li>
-                              <!-- list item -->
-                              <li>T-SQL & MySQL</li>
-                              <!-- list item -->
-                              <li>GIT knowledge</li>
+                              <li>KPI Dashboards • Reporting Automation • Data Quality</li>
+                              <li>Dashboards • Reporting Automation • Data Quality</li>
+                              <li>Business Intelligence • KPI Systems • Data Automation</li>
                           </ul>
                           <!-- knowledge list end -->
 
