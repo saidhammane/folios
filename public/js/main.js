@@ -108,6 +108,7 @@ $(function() {
       var delay = 2500 + (index * 100);
       var showText = $(el).data('text') !== 'off';
 
+      $(el).empty();
       var bar = new ProgressBar.Circle(el, {
         strokeWidth: 7,
         easing: 'easeInOut',
@@ -131,6 +132,7 @@ $(function() {
       var target = parseFloat($(el).data('progress')) || 0;
       var delay = 2800 + (index * 100);
 
+      $(el).empty();
       var bar = new ProgressBar.Line(el, {
         strokeWidth: 1.72,
         easing: 'easeInOut',

@@ -1152,6 +1152,11 @@ info bar
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.art-info-bar .art-hard-skills .art-hard-skills-item .art-skill-heading h6 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .art-info-bar .art-hard-skills .art-hard-skills-item .art-line-progress {
   width: 100%;
 }
@@ -1648,6 +1653,23 @@ content
 }
 .art-service-icon-box .art-service-ib-content {
   padding: 30px;
+}
+.art-service-icon-box .art-service-ib-content .art-service-desc {
+  color: #d7d7df;
+  font-size: 14px;
+  line-height: 1.55;
+}
+.art-service-icon-box .art-service-ib-content .art-badge-yellow {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(255, 193, 7, 0.15);
+  color: #FFC107;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  vertical-align: middle;
 }
 .art-service-icon-box .art-service-ib-content .art-service-ib-icon {
   position: absolute;

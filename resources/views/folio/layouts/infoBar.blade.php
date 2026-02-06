@@ -20,8 +20,8 @@
                       <div class="art-header">
                           <!-- avatar -->
                           <div class="art-avatar">
-                              <a data-fancybox="avatar" href="img/face-1.jpg" class="art-avatar-curtain">
-                                  <img src="img/face-1.jpg" alt="avatar">
+                              <a data-fancybox="avatar" href="{{ asset('img/face-1.jpg') }}" class="art-avatar-curtain">
+                                  <img src="{{ asset('img/face-1.jpg') }}" alt="avatar">
                                   <i class="fas fa-expand"></i>
                               </a>
                               <!-- available -->
@@ -37,7 +37,7 @@
                           </h5>
                           <!-- post -->
                           <div class="art-sm-text" style="line-height: 1.35;">
-                              Data Analyst
+                              {{ __('folio.profile.title') }}
                           </div>
                       </div>
                       <!-- info bar header end -->
@@ -51,15 +51,15 @@
                               <ul>
                                   <!-- country -->
                                   <li>
-                                      <h6>Residence:</h6><span>{{ $profile?->residence ?? 'Morocco' }}</span>
+                                      <h6>{{ __('folio.profile.residence') }}:</h6><span>{{ $profile?->residence ?? 'Morocco' }}</span>
                                   </li>
                                   <!-- city -->
                                   <li>
-                                      <h6>City:</h6><span>{{ $profile?->city ?? 'CASABLANCA' }}</span>
+                                      <h6>{{ __('folio.profile.city') }}:</h6><span>{{ $profile?->city ?? 'CASABLANCA' }}</span>
                                   </li>
                                   <!-- age -->
                                   <li>
-                                      <h6>Age:</h6><span>{{ $profile?->age ?? '24' }}</span>
+                                      <h6>{{ __('folio.profile.age') }}:</h6><span>{{ $profile?->age ?? '24' }}</span>
                                   </li>
                               </ul>
                           </div>
@@ -73,23 +73,23 @@
                           <!-- hard skills -->
                           <div class="art-hard-skills p-30-15">
                               <div class="art-hard-skills-item">
-                                  <div class="art-skill-heading"><h6>Business Intelligence (Power BI)</h6></div>
+                                  <div class="art-skill-heading"><h6>{{ __('folio.skills.bi') }}</h6></div>
                                   <div class="art-line-progress" data-progress="0.9"></div>
                               </div>
                               <div class="art-hard-skills-item">
-                                  <div class="art-skill-heading"><h6>Data & Reporting (SQL + Excel)</h6></div>
+                                  <div class="art-skill-heading"><h6>{{ __('folio.skills.sql_excel') }}</h6></div>
                                   <div class="art-line-progress" data-progress="0.88"></div>
                               </div>
                               <div class="art-hard-skills-item">
-                                  <div class="art-skill-heading"><h6>Data Modeling & Metrics</h6></div>
+                                  <div class="art-skill-heading"><h6>{{ __('folio.skills.modeling') }}</h6></div>
                                   <div class="art-line-progress" data-progress="0.82"></div>
                               </div>
                               <div class="art-hard-skills-item">
-                                  <div class="art-skill-heading"><h6>Automation & Data Pipelines (Python)</h6></div>
+                                  <div class="art-skill-heading"><h6>{{ __('folio.skills.automation') }}</h6></div>
                                   <div class="art-line-progress" data-progress="0.8"></div>
                               </div>
                               <div class="art-hard-skills-item">
-                                  <div class="art-skill-heading"><h6>Web Dashboards (React)</h6></div>
+                                  <div class="art-skill-heading"><h6>{{ __('folio.skills.web_dash') }}</h6></div>
                                   <div class="art-line-progress" data-progress="0.7"></div>
                               </div>
                           </div>
@@ -100,9 +100,9 @@
 
                           <!-- knowledge list -->
                           <ul class="art-knowledge-list p-15-0">
-                              <li>KPI Dashboards • Reporting Automation • Data Quality</li>
-                              <li>Dashboards • Reporting Automation • Data Quality</li>
-                              <li>Business Intelligence • KPI Systems • Data Automation</li>
+                              <li>{{ __('folio.tags.kpi') }}</li>
+                              <li>{{ __('folio.tags.dashboards') }}</li>
+                              <li>{{ __('folio.tags.bi') }}</li>
                           </ul>
                           <!-- knowledge list end -->
 
@@ -113,7 +113,7 @@
                           <div class="art-links-frame p-15-15">
 
                               <!-- download cv button -->
-                              <a href="files/cv.pdf" class="art-link" download>Télécharger CV<i
+                              <a href="files/cv.pdf" class="art-link" download>{{ __('folio.profile.download_resume') }}<i
                                       class="fas fa-download"></i></a>
 
                           </div>
@@ -139,3 +139,4 @@
 
               </div>
               <!-- info bar end -->
+

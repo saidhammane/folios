@@ -5,16 +5,20 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FolioController;
 use Illuminate\Support\Facades\Route;
 
-Route::group([], function () {
-    Route::get('/', [FolioController::class, 'app'])->name('app');
-    Route::get('/portfolio', [FolioController::class, 'portfolio'])->name('portfolio');
-    Route::get('/contact', [FolioController::class, 'contact'])->name('contact');
-    Route::get('/history', [FolioController::class, 'history'])->name('history');
-    Route::get('/blog', [FolioController::class, 'blog'])->name('blog');
-    
-    Route::post('send-mail', [MailController::class, 'submitForm'])->name('send-mail');
+Route::redirect('/', '/en');
 
-});
+Route::prefix('{locale}')
+    ->where(['locale' => 'en|fr'])
+    ->middleware('setLocale')
+    ->group(function () {
+        Route::get('/', [FolioController::class, 'app'])->name('app');
+        Route::get('/portfolio', [FolioController::class, 'portfolio'])->name('portfolio');
+        Route::get('/contact', [FolioController::class, 'contact'])->name('contact');
+        Route::get('/history', [FolioController::class, 'history'])->name('history');
+        Route::get('/blog', [FolioController::class, 'blog'])->name('blog');
+
+        Route::post('/send-mail', [MailController::class, 'submitForm'])->name('send-mail');
+    });
 
 
 Route::get('/dashboard', function () {

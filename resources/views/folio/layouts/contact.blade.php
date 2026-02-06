@@ -18,7 +18,7 @@
                         <!-- title frame -->
                         <div class="art-title-frame">
                             <!-- title -->
-                            <h4>Contact information</h4>
+                            <h4>{{ __('folio.contact.info_title') }}</h4>
                         </div>
                         <!-- title frame end -->
                     </div>
@@ -33,7 +33,7 @@
                         <div class="art-table p-15-15">
                             <ul>
                                 <li>
-                                    <h6>Country:</h6><span>Morocco</span>
+                                    <h6>{{ __('folio.contact.country') }}:</h6><span>Morocco</span>
                                 </li>
                             </ul>
                         </div>
@@ -48,7 +48,7 @@
                         <div class="art-table p-15-15">
                             <ul>
                                 <li>
-                                    <h6>Email:</h6><span>said.hammane1@gmail.com</span>
+                                    <h6>{{ __('folio.contact.email') }}:</h6><span>said.hammane1@gmail.com</span>
                                 </li>
                             </ul>
                         </div>
@@ -63,7 +63,7 @@
                         <div class="art-table p-15-15">
                             <ul>
                                 <li>
-                                    <h6>Personal:</h6><span>+212684756919</span>
+                                    <h6>{{ __('folio.contact.personal') }}:</h6><span>+212684756919</span>
                                 </li>
                             </ul>
                         </div>
@@ -81,7 +81,7 @@
                         <!-- title frame -->
                         <div class="art-title-frame">
                             <!-- title -->
-                            <h4>Get in touch</h4>
+                            <h4>{{ __('folio.contact.get_in_touch') }}</h4>
                         </div>
                         <!-- title frame end -->
                     </div>
@@ -91,14 +91,15 @@
                     <div class="art-a art-card">
 
                         <!-- contact form -->
-                        <form class="art-contact-form" method="POST" action="{{ route('send-mail') }}"
+                        <form class="art-contact-form" method="POST"
+                            action="{{ route('send-mail', ['locale' => app()->getLocale()]) }}"
                             data-ajax="true">
                             @csrf
                             <!-- form field -->
                             <div class="art-form-field">
                                 <!-- name input -->
-                                <input id="name" name="name" class="art-input" type="text" placeholder="Name"
-                                    required>
+                                <input id="name" name="name" class="art-input" type="text"
+                                    placeholder="{{ __('folio.contact.name_placeholder') }}">
                                 <!-- label -->
                                 <label for="name"><i class="fas fa-user"></i></label>
                             </div>
@@ -107,7 +108,7 @@
                             <div class="art-form-field">
                                 <!-- email input -->
                                 <input id="email" name="email" class="art-input" type="email"
-                                    placeholder="Email" required>
+                                    placeholder="{{ __('folio.contact.email_placeholder') }}">
                                 <!-- label -->
                                 <label for="email"><i class="fas fa-at"></i></label>
                             </div>
@@ -115,8 +116,8 @@
                             <!-- form field -->
                             <div class="art-form-field">
                                 <!-- name input -->
-                                <input id="subject" name="subject" class="art-input" type="text" placeholder="Subject"
-                                    required>
+                                <input id="subject" name="subject" class="art-input" type="text"
+                                    placeholder="{{ __('folio.contact.subject_placeholder') }}">
                                 <!-- label -->
                                 <label for="subject"><i class="fas fa-earth"></i></label>
                             </div>
@@ -124,8 +125,8 @@
                             <!-- form field -->
                             <div class="art-form-field">
                                 <!-- message textarea -->
-                                <textarea id="message" name="message" class="art-input" placeholder="Message"
-                                    required></textarea>
+                                <textarea id="message" name="message" class="art-input"
+                                    placeholder="{{ __('folio.contact.message_placeholder') }}"></textarea>
                                 <!-- label -->
                                 <label for="message"><i class="far fa-envelope"></i></label>
                             </div>
@@ -133,7 +134,7 @@
                             <!-- button -->
                             <div class="art-submit-frame">
                                 <button class="art-btn art-btn-md art-submit" type="submit">
-                                    <span class="btn-text">Send message</span>
+                                    <span class="btn-text">{{ __('folio.contact.send_message') }}</span>
                                     <span class="btn-loader" aria-hidden="true"></span>
                                 </button>
                                 <!-- success -->
