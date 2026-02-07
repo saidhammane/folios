@@ -88,10 +88,6 @@
                                   <div class="art-skill-heading"><h6>{{ __('folio.skills.automation') }}</h6></div>
                                   <div class="art-line-progress" data-progress="0.8"></div>
                               </div>
-                              <div class="art-hard-skills-item">
-                                  <div class="art-skill-heading"><h6>{{ __('folio.skills.web_dash') }}</h6></div>
-                                  <div class="art-line-progress" data-progress="0.7"></div>
-                              </div>
                           </div>
                           <!-- language skills end -->
 
@@ -103,6 +99,7 @@
                               <li>{{ __('folio.tags.kpi') }}</li>
                               <li>{{ __('folio.tags.dashboards') }}</li>
                               <li>{{ __('folio.tags.bi') }}</li>
+                              <li>Autres compétences : {{ __('folio.skills.web_dash') }}</li>
                           </ul>
                           <!-- knowledge list end -->
 
@@ -119,6 +116,14 @@
                           </div>
                           <!-- links frame end -->
 
+                          <div class="art-links-frame p-15-15">
+                              <a href="https://wa.me/212684756919" target="_blank" rel="noopener noreferrer"
+                                  class="art-btn art-btn-md" style="width:100%; display:flex; align-items:center; justify-content:center; gap:10px;">
+                                  <i class="fab fa-whatsapp" style="font-size:18px;"></i>
+                                  <span>WhatsApp</span>
+                              </a>
+                          </div>
+
                       </div>
                       <!-- scroll frame end -->
 
@@ -130,7 +135,7 @@
                           <!-- social link -->
                           <a target="_blank" href="https://saidhammane.cloud/"><i class="fas fa-globe"></i></i></a>
                           <!-- social link -->
-                          <a target="_blank" href="https://x.com/overload0x"><i class="fab fa-twitter"></i></a>
+                          <a target="_blank" href="https://wa.me/212684756919"><i class="fab fa-whatsapp"></i></a>
                       </div>
                       <!-- sidebar social end -->
 

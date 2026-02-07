@@ -15,7 +15,6 @@ Route::prefix('{locale}')
         Route::get('/portfolio', [FolioController::class, 'portfolio'])->name('portfolio');
         Route::get('/contact', [FolioController::class, 'contact'])->name('contact');
         Route::get('/history', [FolioController::class, 'history'])->name('history');
-        Route::get('/blog', [FolioController::class, 'blog'])->name('blog');
 
         Route::post('/send-mail', [MailController::class, 'submitForm'])->name('send-mail');
     });

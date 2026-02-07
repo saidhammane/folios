@@ -113,8 +113,8 @@
                                 <div class="mb-15 art-service-desc">Tableaux de bord décisionnels avec modèles propres et KPI clairs. Connexion multi-sources (Excel/CSV + bases SQL) pour une vision fiable.</div>
                                 <!-- button -->
                                 <div class="art-buttons-frame"><a
-                                        href="{{ route('contact', ['locale' => app()->getLocale()]) }}"
-                                        class="art-link art-color-link art-w-chevron">ME CONTACTER →</a>
+                                        href="https://wa.me/212684756919" target="_blank" rel="noopener noreferrer"
+                                        class="art-link art-color-link art-w-chevron">ME CONTACTER</a>
                                 </div>
                             </div>
                             <!-- service content end -->
@@ -132,13 +132,13 @@
                             <!-- service content -->
                             <div class="art-service-ib-content">
                                 <!-- title -->
-                                <h5 class="mb-15">Suivi KPI & Reporting Mensuel</h5>
+                                <h5 class="mb-15">Suivi KPI & Reporting Mensuel (Retainer)</h5>
                                 <!-- text -->
                                 <div class="mb-15 art-service-desc">Mise à jour des tableaux de bord, optimisation des indicateurs et synthèse mensuelle pour un pilotage clair.</div>
                                 <!-- button -->
                                 <div class="art-buttons-frame"><a
-                                        href="{{ route('contact', ['locale' => app()->getLocale()]) }}"
-                                        class="art-link art-color-link art-w-chevron">ME CONTACTER →</a>
+                                        href="https://wa.me/212684756919" target="_blank" rel="noopener noreferrer"
+                                        class="art-link art-color-link art-w-chevron">ME CONTACTER</a>
                                 </div>
                             </div>
                             <!-- service content end -->
@@ -161,8 +161,8 @@
                                 <div class="mb-15 art-service-desc">Rapports récurrents automatisés, moins d’erreurs et plus de temps gagné. Rafraîchissements planifiés et datasets stables.</div>
                                 <!-- button -->
                                 <div class="art-buttons-frame"><a
-                                        href="{{ route('contact', ['locale' => app()->getLocale()]) }}"
-                                        class="art-link art-color-link art-w-chevron">ME CONTACTER →</a>
+                                        href="https://wa.me/212684756919" target="_blank" rel="noopener noreferrer"
+                                        class="art-link art-color-link art-w-chevron">ME CONTACTER</a>
                                 </div>
                             </div>
                             <!-- service content end -->
@@ -185,8 +185,8 @@
                                 <div class="mb-15 art-service-desc">Jeux de données fiables et requêtes optimisées sur la source de vérité. Indicateurs clairs, performance et résultats solides.</div>
                                 <!-- button -->
                                 <div class="art-buttons-frame"><a
-                                        href="{{ route('contact', ['locale' => app()->getLocale()]) }}"
-                                        class="art-link art-color-link art-w-chevron">ME CONTACTER →</a>
+                                        href="https://wa.me/212684756919" target="_blank" rel="noopener noreferrer"
+                                        class="art-link art-color-link art-w-chevron">ME CONTACTER</a>
                                 </div>
                             </div>
                             <!-- service content end -->
@@ -209,8 +209,8 @@
                                 <div class="mb-15 art-service-desc">1 page KPI (10 KPI) + filtres + vidéo explicative + 1 révision.</div>
                                 <!-- button -->
                                 <div class="art-buttons-frame"><a
-                                        href="{{ route('contact', ['locale' => app()->getLocale()]) }}"
-                                        class="art-link art-color-link art-w-chevron">ME CONTACTER →</a>
+                                        href="https://wa.me/212684756919" target="_blank" rel="noopener noreferrer"
+                                        class="art-link art-color-link art-w-chevron">ME CONTACTER</a>
                                 </div>
                             </div>
                             <!-- service content end -->
@@ -235,6 +235,8 @@
 hi
 </div>
 <!-- content end -->
+
+
 
 
 

@@ -3,10 +3,9 @@
 return [
     'menu' => [
         'home' => 'Accueil',
-        'portfolio' => 'Portfolio',
+        'portfolio' => 'Démo KPI (48h)',
         'history' => 'Parcours',
         'contact' => 'Contact',
-        'blog' => 'Blog',
     ],
     'profile' => [
         'title' => 'BI & Data Analyst | Power BI, SQL, Excel & KPI Reporting',
@@ -67,11 +66,9 @@ return [
     'explore_now' => 'Découvrir',
     'hero' => [
         'title' => "Data Analyst & BI",
-        'code_prefix' => 'Je crée',
+        'code_prefix' => '',
         'rotate' => [
-            'des dashboards BI.',
-            'des modèles de données & KPI.',
-            'de l’automatisation du reporting.',
+            "J'automatise le reporting et je construis des dashboards KPI.",
         ],
     ],
     'contact' => [

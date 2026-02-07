@@ -32,10 +32,6 @@ class FolioController extends Controller
         return view('folio.pages.contact', $this->profileData());
     }
 
-    public function blog(){
-        return view('folio.pages.blog', $this->profileData());
-    }
-
     public function blogDetail(){
         return view('folio.pages.blogdetail', $this->profileData());
     }

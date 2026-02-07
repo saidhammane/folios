@@ -3,10 +3,9 @@
 return [
     'menu' => [
         'home' => 'Home',
-        'portfolio' => 'Portfolio',
+        'portfolio' => 'KPI Demo (48h)',
         'history' => 'History',
         'contact' => 'Contact',
-        'blog' => 'Blog',
     ],
     'profile' => [
         'title' => 'BI & Data Analyst | Power BI, SQL, Excel & KPI Reporting',

@@ -32,7 +32,6 @@
                     $isPortfolio = $path === $locale . '/portfolio';
                     $isHistory = $path === $locale . '/history';
                     $isContact = $path === $locale . '/contact';
-                    $isBlog = $path === $locale . '/blog';
                 @endphp
                 <ul class="main-menu">
                     <!-- menu item -->
@@ -50,8 +49,6 @@
                     <li class="menu-item {{ $isContact ? 'current-menu-item' : '' }}"><a
                             href="{{ route('contact', ['locale' => app()->getLocale()]) }}">{{ __('folio.menu.contact') }}</a></li>
                     <!-- menu item -->
-                    <li class="menu-item {{ $isBlog ? 'current-menu-item' : '' }}"><a
-                            href="{{ route('blog', ['locale' => app()->getLocale()]) }}">{{ __('folio.menu.blog') }}</a></li>
                 </ul>
                 <!-- menu list end -->
             </nav>
