@@ -5,7 +5,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FolioController;
 use Illuminate\Support\Facades\Route;
 
-Route::redirect('/', '/en');
+Route::redirect('/', '/fr');
 
 Route::prefix('{locale}')
     ->where(['locale' => 'en|fr'])
