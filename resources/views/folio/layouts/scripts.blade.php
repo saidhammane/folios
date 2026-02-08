@@ -142,6 +142,7 @@
                         });
 
                         if (response.ok) {
+                            form.reset();
                             setShowSuccess(true);
                             return;
                         }
