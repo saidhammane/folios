@@ -41,6 +41,18 @@
         .art-btn-primary:hover {transform:scale(1.02); box-shadow:0 8px 24px rgba(0,0,0,0.35);}
         .art-btn-primary:active {transform:scale(0.98);}
         .art-modal-icon {color:#ffb400; margin-right:8px;}
+        .art-avatar-curtain {transition: transform 220ms ease, box-shadow 220ms ease;}
+        .art-avatar-curtain:hover {transform: scale(1.03); box-shadow: 0 0 12px rgba(255, 193, 7, 0.35);}
+        .art-avatar-modal {position: fixed; inset: 0; display: none; z-index: 9999;}
+        .art-avatar-modal.is-open {display: block;}
+        .art-avatar-modal__overlay {position:absolute; inset:0; background: rgba(0,0,0,0.6); opacity:0; transition: opacity 200ms ease-out;}
+        .art-avatar-modal__content {position:relative; max-width: 560px; margin: 8vh auto; background:#1f222a; border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:16px; box-shadow:0 12px 40px rgba(0,0,0,0.35); opacity:0; transform: scale(0.95); transition: opacity 200ms ease-out, transform 200ms ease-out;}
+        .art-avatar-modal.is-visible .art-avatar-modal__overlay {opacity:1;}
+        .art-avatar-modal.is-visible .art-avatar-modal__content {opacity:1; transform: scale(1);}
+        .art-avatar-modal.is-closing .art-avatar-modal__overlay {opacity:0; transition: opacity 160ms ease-in;}
+        .art-avatar-modal.is-closing .art-avatar-modal__content {opacity:0; transform: scale(0.95); transition: opacity 160ms ease-in, transform 160ms ease-in;}
+        .art-avatar-modal__content img {width:100%; border-radius:12px; display:block;}
+        .art-avatar-modal__close {position:absolute; top:8px; right:10px; background:transparent; border:none; color:#FFC107; font-size:22px; line-height:1; cursor:pointer;}
     </style>
     <!-- floating whatsapp -->
     <a href="https://wa.me/212684756919" target="_blank" rel="noopener noreferrer" aria-label="Contacter sur WhatsApp"
@@ -49,6 +61,38 @@
     </a>
     <script>
         (function () {
+            function initAvatarModal() {
+                const modal = document.querySelector('.art-avatar-modal');
+                const openBtn = document.querySelector('[data-avatar-open]');
+                if (!modal || !openBtn || modal.dataset.bound === 'true') return;
+                modal.dataset.bound = 'true';
+
+                const closeEls = modal.querySelectorAll('[data-avatar-close]');
+                const closeModal = () => {
+                    if (!modal.classList.contains('is-open')) return;
+                    modal.classList.add('is-closing');
+                    modal.classList.remove('is-visible');
+                    setTimeout(() => {
+                        modal.classList.remove('is-open', 'is-closing');
+                        modal.setAttribute('aria-hidden', 'true');
+                    }, 180);
+                };
+                const openModal = () => {
+                    modal.classList.add('is-open');
+                    modal.classList.remove('is-closing');
+                    modal.setAttribute('aria-hidden', 'false');
+                    requestAnimationFrame(() => modal.classList.add('is-visible'));
+                };
+
+                openBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openModal();
+                });
+                closeEls.forEach((el) => el.addEventListener('click', closeModal));
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') closeModal();
+                });
+            }
             function initContactForm() {
                 const form = document.querySelector('.art-contact-form[data-ajax="true"]');
                 if (!form || form.dataset.bound === 'true') return;
@@ -181,6 +225,8 @@
             }
 
             initContactForm();
+            initAvatarModal();
             document.addEventListener('swup:contentReplaced', initContactForm);
+            document.addEventListener('swup:contentReplaced', initAvatarModal);
         })();
     </script>

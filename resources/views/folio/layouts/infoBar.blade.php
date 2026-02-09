@@ -19,15 +19,22 @@
                       <!-- info bar header -->
                       <div class="art-header">
                           <!-- avatar -->
-                          <div class="art-avatar">
-                              <a data-fancybox="avatar" href="{{ asset('img/face-1.jpg') }}" class="art-avatar-curtain">
+                      <div class="art-avatar">
+                              <button type="button" class="art-avatar-curtain" data-avatar-open>
                                   <img src="{{ asset('img/face-1.jpg') }}" alt="avatar">
                                   <i class="fas fa-expand"></i>
-                              </a>
+                              </button>
                               <!-- available -->
                               <div class="art-lamp-light">
                                   <!-- add class 'art-not-available' if not available-->
                                   <div class="art-available-lamp"></div>
+                              </div>
+                          </div>
+                          <div class="art-avatar-modal" aria-hidden="true">
+                              <div class="art-avatar-modal__overlay" data-avatar-close></div>
+                              <div class="art-avatar-modal__content" role="dialog" aria-modal="true" aria-label="Avatar">
+                                  <button type="button" class="art-avatar-modal__close" aria-label="Close" data-avatar-close>&times;</button>
+                                  <img src="{{ asset('img/face-1.jpg') }}" alt="avatar">
                               </div>
                           </div>
                           <!-- avatar end -->
@@ -133,7 +140,7 @@
                           <a target="_blank" href="https://www.linkedin.com/in/said-hammane-07926b1a0/"><i
                                   class="fab fa-linkedin"></i></a>
                           <!-- social link -->
-                          <a target="_blank" href="https://saidhammane.cloud/"><i class="fas fa-globe"></i></i></a>
+                          <a target="_blank" href="https://saidhammane.space/"><i class="fas fa-globe"></i></i></a>
                           <!-- social link -->
                           <a target="_blank" href="https://wa.me/212684756919"><i class="fab fa-whatsapp"></i></a>
                       </div>
