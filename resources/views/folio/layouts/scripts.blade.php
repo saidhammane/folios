@@ -228,7 +228,40 @@
 
             initContactForm();
             initAvatarModal();
+            function initDownloadCv() {
+                const links = document.querySelectorAll('.js-download-cv');
+                if (!links.length) return;
+
+                const locale = document.documentElement.getAttribute('lang') || 'en';
+                const filename = locale === 'fr' ? 'CV_Said_HAMMANE.pdf' : 'Resume_Said_HAMMANE.pdf';
+
+                links.forEach((link) => {
+                    if (link.dataset.bound === 'true') return;
+                    link.dataset.bound = 'true';
+                    link.addEventListener('click', async (e) => {
+                        e.preventDefault();
+                        try {
+                            const response = await fetch(link.href, { credentials: 'same-origin' });
+                            if (!response.ok) throw new Error('download failed');
+                            const blob = await response.blob();
+                            const url = window.URL.createObjectURL(blob);
+                            const a = document.createElement('a');
+                            a.href = url;
+                            a.download = filename;
+                            document.body.appendChild(a);
+                            a.click();
+                            a.remove();
+                            window.URL.revokeObjectURL(url);
+                        } catch (err) {
+                            window.location.href = link.href;
+                        }
+                    });
+                });
+            }
+
+            initDownloadCv();
             document.addEventListener('swup:contentReplaced', initContactForm);
             document.addEventListener('swup:contentReplaced', initAvatarModal);
+            document.addEventListener('swup:contentReplaced', initDownloadCv);
         })();
     </script>

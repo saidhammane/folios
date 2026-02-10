@@ -117,7 +117,7 @@
                           <div class="art-links-frame p-15-15">
 
                               <!-- download cv button -->
-                              <a href="files/cv.pdf" class="art-link" download>{{ __('folio.profile.download_resume') }}<i
+                              <a href="{{ route('download.cv') }}" class="art-link js-download-cv" data-no-swup download>{{ __('folio.profile.download_resume') }}<i
                                       class="fas fa-download"></i></a>
 
                           </div>

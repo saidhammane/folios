@@ -7,6 +7,17 @@ use Illuminate\Support\Facades\Route;
 
 Route::redirect('/', '/fr');
 
+Route::get('/download-cv', function () {
+    $locale = app()->getLocale();
+    $file = $locale === 'fr'
+        ? public_path('files/CV_Said_HAMMANE.pdf')
+        : public_path('files/Resume_Said_HAMMANE.pdf');
+
+    abort_unless(file_exists($file), 404);
+
+    return response()->download($file);
+})->name('download.cv');
+
 Route::prefix('{locale}')
     ->where(['locale' => 'en|fr'])
     ->middleware('setLocale')
