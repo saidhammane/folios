@@ -9,11 +9,21 @@ Route::redirect('/', '/fr');
 
 Route::get('/download-cv', function () {
     $locale = app()->getLocale();
-    $file = $locale === 'fr'
-        ? public_path('files/CV_Said_HAMMANE.pdf')
-        : public_path('files/Resume_Said_HAMMANE.pdf');
+    $filename = $locale === 'fr' ? 'CV_Said_HAMMANE.pdf' : 'Resume_Said_HAMMANE.pdf';
+    $candidates = [
+        public_path('files/' . $filename),
+        base_path('public_html/files/' . $filename),
+    ];
 
-    abort_unless(file_exists($file), 404);
+    $file = null;
+    foreach ($candidates as $candidate) {
+        if (is_string($candidate) && file_exists($candidate)) {
+            $file = $candidate;
+            break;
+        }
+    }
+
+    abort_unless($file && file_exists($file), 404);
 
     return response()->download($file);
 })->name('download.cv');
