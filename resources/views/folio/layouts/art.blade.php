@@ -51,7 +51,7 @@
                                 </div>
                                 <!-- main title end -->
                                 <!-- photo -->
-                                <img src="img/face-2.png" class="art-banner-photo" alt="Your Name">
+                                <img src="img/face-2.png" class="art-banner-photo" alt="{{ __('folio.profile.avatar_alt') }}">
                             </div>
                             <!-- banner overlay end -->
                         </div>
@@ -88,10 +88,13 @@
 
                         <!-- section title -->
                         <div class="art-section-title">
+                            @php
+                                $expertise = trans('folio.expertise');
+                            @endphp
                             <!-- title frame -->
                             <div class="art-title-frame">
                                 <!-- title -->
-                            <h4>Domaines d’expertise</h4>
+                            <h4>{{ $expertise['title'] }}</h4>
                             </div>
                             <!-- title frame end -->
                         </div>
@@ -101,124 +104,35 @@
                     <!-- col end -->
 
                     <!-- col -->
-                    <div class="col-lg-4 col-md-6">
+                    @foreach ($expertise['cards'] as $card)
+                        <div class="col-lg-4 col-md-6">
 
-                        <!-- service -->
-                        <div class="art-a art-service-icon-box">
-                            <!-- service content -->
-                            <div class="art-service-ib-content">
-                                <!-- title -->
-                                <h5 class="mb-15">Tableaux de bord BI (Power BI)</h5>
-                                <!-- text -->
-                                <div class="mb-15 art-service-desc">Tableaux de bord décisionnels avec modèles propres et KPI clairs. Connexion multi-sources (Excel/CSV + bases SQL) pour une vision fiable.</div>
-                                <!-- button -->
-                                <div class="art-buttons-frame"><a
-                                        href="https://wa.me/212684756919" target="_blank" rel="noopener noreferrer"
-                                        class="art-link art-color-link art-w-chevron">ME CONTACTER</a>
+                            <!-- service -->
+                            <div class="art-a art-service-icon-box">
+                                <!-- service content -->
+                                <div class="art-service-ib-content">
+                                    <!-- title -->
+                                    <h5 class="mb-15">
+                                        {{ $card['title'] }}
+                                        @if (!empty($card['badge']))
+                                            <span class="art-badge-yellow">{{ $card['badge'] }}</span>
+                                        @endif
+                                    </h5>
+                                    <!-- text -->
+                                    <div class="mb-15 art-service-desc">{{ $card['desc'] }}</div>
+                                    <!-- button -->
+                                    <div class="art-buttons-frame"><a
+                                            href="https://wa.me/212684756919" target="_blank" rel="noopener noreferrer"
+                                            class="art-link art-color-link art-w-chevron">{{ $expertise['cta'] }}</a>
+                                    </div>
                                 </div>
+                                <!-- service content end -->
                             </div>
-                            <!-- service content end -->
+                            <!-- service end -->
+
                         </div>
-                        <!-- service end -->
-
-                    </div>
-                    <!-- col end -->
-
-                    <!-- col -->
-                    <div class="col-lg-4 col-md-6">
-
-                        <!-- service -->
-                        <div class="art-a art-service-icon-box">
-                            <!-- service content -->
-                            <div class="art-service-ib-content">
-                                <!-- title -->
-                                <h5 class="mb-15">Suivi KPI & Reporting Mensuel (Retainer)</h5>
-                                <!-- text -->
-                                <div class="mb-15 art-service-desc">Mise à jour des tableaux de bord, optimisation des indicateurs et synthèse mensuelle pour un pilotage clair.</div>
-                                <!-- button -->
-                                <div class="art-buttons-frame"><a
-                                        href="https://wa.me/212684756919" target="_blank" rel="noopener noreferrer"
-                                        class="art-link art-color-link art-w-chevron">ME CONTACTER</a>
-                                </div>
-                            </div>
-                            <!-- service content end -->
-                        </div>
-                        <!-- service end -->
-
-                    </div>
-                    <!-- col end -->
-
-                    <!-- col -->
-                    <div class="col-lg-4 col-md-6">
-
-                        <!-- service -->
-                        <div class="art-a art-service-icon-box">
-                            <!-- service content -->
-                            <div class="art-service-ib-content">
-                                <!-- title -->
-                                <h5 class="mb-15">Automatisation du reporting (Excel / Python)</h5>
-                                <!-- text -->
-                                <div class="mb-15 art-service-desc">Rapports récurrents automatisés, moins d’erreurs et plus de temps gagné. Rafraîchissements planifiés et datasets stables.</div>
-                                <!-- button -->
-                                <div class="art-buttons-frame"><a
-                                        href="https://wa.me/212684756919" target="_blank" rel="noopener noreferrer"
-                                        class="art-link art-color-link art-w-chevron">ME CONTACTER</a>
-                                </div>
-                            </div>
-                            <!-- service content end -->
-                        </div>
-                        <!-- service end -->
-
-                    </div>
-                    <!-- col end -->
-
-                    <!-- col -->
-                    <div class="col-lg-4 col-md-6">
-
-                        <!-- service -->
-                        <div class="art-a art-service-icon-box">
-                            <!-- service content -->
-                            <div class="art-service-ib-content">
-                                <!-- title -->
-                                <h5 class="mb-15">Analyse Data & SQL</h5>
-                                <!-- text -->
-                                <div class="mb-15 art-service-desc">Jeux de données fiables et requêtes optimisées sur la source de vérité. Indicateurs clairs, performance et résultats solides.</div>
-                                <!-- button -->
-                                <div class="art-buttons-frame"><a
-                                        href="https://wa.me/212684756919" target="_blank" rel="noopener noreferrer"
-                                        class="art-link art-color-link art-w-chevron">ME CONTACTER</a>
-                                </div>
-                            </div>
-                            <!-- service content end -->
-                        </div>
-                        <!-- service end -->
-
-                    </div>
-                    <!-- col end -->
-
-                    <!-- col -->
-                    <div class="col-lg-4 col-md-6">
-
-                        <!-- service -->
-                        <div class="art-a art-service-icon-box">
-                            <!-- service content -->
-                            <div class="art-service-ib-content">
-                                <!-- title -->
-                                <h5 class="mb-15">Pilot KPI Dashboard (48h) <span class="art-badge-yellow">Livré en 48h</span></h5>
-                                <!-- text -->
-                                <div class="mb-15 art-service-desc">1 page KPI (10 KPI) + filtres + vidéo explicative + 1 révision.</div>
-                                <!-- button -->
-                                <div class="art-buttons-frame"><a
-                                        href="https://wa.me/212684756919" target="_blank" rel="noopener noreferrer"
-                                        class="art-link art-color-link art-w-chevron">ME CONTACTER</a>
-                                </div>
-                            </div>
-                            <!-- service content end -->
-                        </div>
-                        <!-- service end -->
-
-                    </div>
-                    <!-- col end -->
+                        <!-- col end -->
+                    @endforeach
                 </div>
                 <!-- row end -->
 
@@ -232,7 +146,6 @@
 
     </div>
     <!-- swup container end -->
-hi
 </div>
 <!-- content end -->
 

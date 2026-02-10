@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
 
 <head>
     @include('folio.layouts.header')
-    <title>Portfolio - Me</title>
+    <title>{{ __('folio.meta.history') }}</title>
 </head>
 
 <body>

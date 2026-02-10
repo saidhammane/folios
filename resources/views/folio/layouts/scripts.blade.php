@@ -55,12 +55,14 @@
         .art-avatar-modal__close {position:absolute; top:8px; right:10px; background:transparent; border:none; color:#FFC107; font-size:22px; line-height:1; cursor:pointer;}
     </style>
     <!-- floating whatsapp -->
-    <a href="https://wa.me/212684756919" target="_blank" rel="noopener noreferrer" aria-label="Contacter sur WhatsApp"
+    <a href="https://wa.me/212684756919" target="_blank" rel="noopener noreferrer" aria-label="{{ __('folio.ui.whatsapp_aria') }}"
         class="art-whatsapp-fab">
         <i class="fab fa-whatsapp"></i>
     </a>
     <script>
         (function () {
+            const uiText = @json(trans('folio.ui'));
+            const contactText = @json(trans('folio.contact'));
             function initAvatarModal() {
                 const modal = document.querySelector('.art-avatar-modal');
                 const openBtn = document.querySelector('[data-avatar-open]');
@@ -119,10 +121,10 @@
                     successOverlay.style.display = 'none';
                     successOverlay.innerHTML = `
                         <div class="art-modal-box" role="dialog" aria-modal="true" aria-labelledby="success-title" aria-describedby="success-text">
-                            <div class="art-modal-title" id="success-title">Message envoy&eacute; <span aria-hidden="true">&#9989;</span></div>
-                            <p class="art-modal-text" id="success-text">Merci ! Je vous r&eacute;ponds rapidement.</p>
+                            <div class="art-modal-title" id="success-title">${uiText.success_title} <span aria-hidden="true">&#9989;</span></div>
+                            <p class="art-modal-text" id="success-text">${uiText.success_text}</p>
                             <div class="art-modal-actions">
-                                <button type="button" class="art-btn-primary" data-modal-ok>OK</button>
+                                <button type="button" class="art-btn-primary" data-modal-ok>${uiText.success_ok}</button>
                             </div>
                         </div>
                     `;
@@ -161,8 +163,8 @@
                     if (!name || !email || !subject || !message) {
                         Swal.fire({
                             icon: 'warning',
-                            title: 'Missing fields',
-                            text: 'Please fill in all fields before sending.'
+                            title: uiText.missing_title,
+                            text: uiText.missing_text
                         });
                         return;
                     }
@@ -171,7 +173,7 @@
                         submitBtn.classList.add('is-loading');
                         submitBtn.setAttribute('disabled', 'disabled');
                     }
-                    if (btnText) btnText.textContent = 'Sending...';
+                    if (btnText) btnText.textContent = contactText.sending;
 
                     try {
                         const formData = new FormData(form);
@@ -196,8 +198,8 @@
                             const messages = Object.values(data.errors || {}).flat().join('\n');
                             Swal.fire({
                                 icon: 'error',
-                                title: 'Validation error',
-                                text: messages || 'Please check your input and try again.'
+                                title: uiText.validation_title,
+                                text: messages || uiText.validation_text
                             });
                             return;
                         }
@@ -205,21 +207,21 @@
                         const errorText = await response.text();
                         Swal.fire({
                             icon: 'error',
-                            title: 'Send failed',
-                            text: errorText || 'Something went wrong. Please try again.'
+                            title: uiText.send_failed_title,
+                            text: errorText || uiText.send_failed_text
                         });
                     } catch (err) {
                         Swal.fire({
                             icon: 'error',
-                            title: 'Network error',
-                            text: 'Could not send your message. Please try again.'
+                            title: uiText.network_title,
+                            text: uiText.network_text
                         });
                     } finally {
                         if (submitBtn) {
                             submitBtn.classList.remove('is-loading');
                             submitBtn.removeAttribute('disabled');
                         }
-                        if (btnText) btnText.textContent = 'Send message';
+                        if (btnText) btnText.textContent = contactText.send_message;
                     }
                 });
             }

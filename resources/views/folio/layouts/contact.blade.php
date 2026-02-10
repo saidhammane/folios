@@ -33,7 +33,7 @@
                         <div class="art-table p-15-15">
                             <ul>
                                 <li>
-                                    <h6>{{ __('folio.contact.country') }}:</h6><span>Morocco</span>
+                                    <h6>{{ __('folio.contact.country') }}:</h6><span>{{ __('folio.contact.country_value') }}</span>
                                 </li>
                             </ul>
                         </div>
@@ -48,7 +48,7 @@
                         <div class="art-table p-15-15">
                             <ul>
                                 <li>
-                                    <h6>{{ __('folio.contact.email') }}:</h6><span>said.hammane1@gmail.com</span>
+                                    <h6>{{ __('folio.contact.email') }}:</h6><span>{{ __('folio.contact.email_value') }}</span>
                                 </li>
                             </ul>
                         </div>
@@ -63,7 +63,7 @@
                         <div class="art-table p-15-15">
                             <ul>
                                 <li>
-                                    <h6>{{ __('folio.contact.personal') }}:</h6><span>+212684756919</span>
+                                    <h6>{{ __('folio.contact.personal') }}:</h6><span>{{ __('folio.contact.personal_value') }}</span>
                                 </li>
                             </ul>
                         </div>
@@ -138,7 +138,7 @@
                                     <span class="btn-loader" aria-hidden="true"></span>
                                 </button>
                                 <!-- success -->
-                                <div class="art-success">Success <i class="fas fa-check"></i></div>
+                                <div class="art-success">{{ __('folio.ui.success_inline') }} <i class="fas fa-check"></i></div>
                             </div>
                         </form>
                         <!-- contact form end -->

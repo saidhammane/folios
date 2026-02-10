@@ -21,7 +21,7 @@
                           <!-- avatar -->
                       <div class="art-avatar">
                               <button type="button" class="art-avatar-curtain" data-avatar-open>
-                                  <img src="{{ asset('img/face-1.jpg') }}" alt="avatar">
+                                  <img src="{{ asset('img/face-1.jpg') }}" alt="{{ __('folio.profile.avatar_alt') }}">
                                   <i class="fas fa-expand"></i>
                               </button>
                               <!-- available -->
@@ -33,14 +33,14 @@
                           <div class="art-avatar-modal" aria-hidden="true">
                               <div class="art-avatar-modal__overlay" data-avatar-close></div>
                               <div class="art-avatar-modal__content" role="dialog" aria-modal="true" aria-label="Avatar">
-                                  <button type="button" class="art-avatar-modal__close" aria-label="Close" data-avatar-close>&times;</button>
-                                  <img src="{{ asset('img/face-1.jpg') }}" alt="avatar">
+                                  <button type="button" class="art-avatar-modal__close" aria-label="{{ __('folio.ui.close') }}" data-avatar-close>&times;</button>
+                                  <img src="{{ asset('img/face-1.jpg') }}" alt="{{ __('folio.profile.avatar_alt') }}">
                               </div>
                           </div>
                           <!-- avatar end -->
                           <!-- name -->
                           <h5 class="art-name mb-10">
-                              <a href="/folio/en/home.html">{{ $profile?->name ?? 'Said HAMMANE' }}</a>
+                              <a href="{{ route('app', ['locale' => app()->getLocale()]) }}">{{ $profile?->name ?? 'Said HAMMANE' }}</a>
                           </h5>
                           <!-- post -->
                           <div class="art-sm-text" style="line-height: 1.35;">
@@ -58,15 +58,15 @@
                               <ul>
                                   <!-- country -->
                                   <li>
-                                      <h6>{{ __('folio.profile.residence') }}:</h6><span>{{ $profile?->residence ?? 'Morocco' }}</span>
+                                      <h6>{{ __('folio.profile.residence') }}:</h6><span>{{ $profile?->residence ?? __('folio.profile.residence_value') }}</span>
                                   </li>
                                   <!-- city -->
                                   <li>
-                                      <h6>{{ __('folio.profile.city') }}:</h6><span>{{ $profile?->city ?? 'CASABLANCA' }}</span>
+                                      <h6>{{ __('folio.profile.city') }}:</h6><span>{{ $profile?->city ?? __('folio.profile.city_value') }}</span>
                                   </li>
                                   <!-- age -->
                                   <li>
-                                      <h6>{{ __('folio.profile.age') }}:</h6><span>{{ $profile?->age ?? '24' }}</span>
+                                      <h6>{{ __('folio.profile.age') }}:</h6><span>{{ $profile?->age ?? __('folio.profile.age_value') }}</span>
                                   </li>
                               </ul>
                           </div>
@@ -106,7 +106,7 @@
                               <li>{{ __('folio.tags.kpi') }}</li>
                               <li>{{ __('folio.tags.dashboards') }}</li>
                               <li>{{ __('folio.tags.bi') }}</li>
-                              <li>Autres compétences : {{ __('folio.skills.web_dash') }}</li>
+                              <li>{{ __('folio.skills.other_prefix') }} {{ __('folio.skills.web_dash') }}</li>
                           </ul>
                           <!-- knowledge list end -->
 
@@ -127,7 +127,7 @@
                               <a href="https://wa.me/212684756919" target="_blank" rel="noopener noreferrer"
                                   class="art-btn art-btn-md" style="width:100%; display:flex; align-items:center; justify-content:center; gap:10px;">
                                   <i class="fab fa-whatsapp" style="font-size:18px;"></i>
-                                  <span>WhatsApp</span>
+                                  <span>{{ __("folio.ui.whatsapp") }}</span>
                               </a>
                           </div>
 

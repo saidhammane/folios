@@ -15,68 +15,66 @@
                 @media (max-width:576px){.portfolio-chip{padding:6px 10px;font-size:11px;}}
             </style>
 
+            @php
+                $portfolio = trans('folio.portfolio');
+            @endphp
+
             <!-- row -->
             <div class="row p-30-0">
 
                 <div class="col-lg-12">
-                    <h4 class="mb-10">Démo KPI (48h)</h4>
-                    <div class="art-sm-text mb-30">Je vous prépare une démo KPI sur vos données (Excel/CSV/SQL) en 48h.</div>
+                    <h4 class="mb-10">{{ $portfolio['title'] }}</h4>
+                    <div class="art-sm-text mb-30">{{ $portfolio['subtitle'] }}</div>
                 </div>
 
                 <div class="col-lg-12">
                     <div class="portfolio-card">
-                        <h5 class="mb-10">Démo KPI (48h) — Ce que vous recevez</h5>
+                        <h5 class="mb-10">{{ $portfolio['demo_title'] }}</h5>
                         <ul class="portfolio-list">
-                            <li>1 page KPI (10 indicateurs)</li>
-                            <li>Filtres + vues (ventes / stock / performance)</li>
-                            <li>Connexion SQL (si disponible) + requêtes optimisées / préparation dataset</li>
-                            <li>Nettoyage + structuration des données (si besoin)</li>
-                            <li>Vidéo explicative courte</li>
-                            <li>1 révision incluse</li>
+                            @foreach ($portfolio['demo_items'] as $item)
+                                <li>{{ $item }}</li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
 
                 <div class="col-lg-12">
                     <div class="portfolio-card">
-                        <h5 class="mb-10">Comment ça se passe ?</h5>
+                        <h5 class="mb-10">{{ $portfolio['process_title'] }}</h5>
                         <ol class="portfolio-steps">
-                            <li>Vous envoyez un export Excel/CSV (ventes/stock).</li>
-                            <li>Je construis une démo Power BI en 48h.</li>
-                            <li>Livraison + ajustements (1 révision).</li>
+                            @foreach ($portfolio['process_steps'] as $step)
+                                <li>{{ $step }}</li>
+                            @endforeach
                         </ol>
                     </div>
                 </div>
 
                 <div class="col-lg-12">
                     <div class="portfolio-card">
-                        <h5 class="mb-10">Pour qui ?</h5>
+                        <h5 class="mb-10">{{ $portfolio['audience_title'] }}</h5>
                         <div>
-                            <span class="portfolio-chip">PME</span>
-                            <span class="portfolio-chip">Distribution</span>
-                            <span class="portfolio-chip">Retail</span>
-                            <span class="portfolio-chip">E-commerce</span>
-                            <span class="portfolio-chip">Cabinets comptables</span>
-                            <span class="portfolio-chip">Équipes commerciales</span>
+                            @foreach ($portfolio['audience_chips'] as $chip)
+                                <span class="portfolio-chip">{{ $chip }}</span>
+                            @endforeach
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-12">
                     <div class="portfolio-card portfolio-cta">
-                        <h5 class="mb-5">Demander une démo</h5>
-                        <div class="art-sm-text">Prêt à voir un aperçu sur vos propres données ?</div>
-                        <a class="art-btn art-btn-md" href="{{ route('contact', ['locale' => app()->getLocale()]) }}" aria-label="Aller à la page Contact"><span>Aller à la page Contact →</span></a>
-                        <div class="art-sm-text">WhatsApp ou formulaire, au choix.</div>
+                        <h5 class="mb-5">{{ $portfolio['cta_title'] }}</h5>
+                        <div class="art-sm-text">{{ $portfolio['cta_subtitle'] }}</div>
+                        <a class="art-btn art-btn-md" href="{{ route('contact', ['locale' => app()->getLocale()]) }}" aria-label="{{ $portfolio['cta_primary'] }}"><span>{{ $portfolio['cta_primary'] }}</span></a>
+                        <div class="art-sm-text">{{ $portfolio['cta_note'] }}</div>
                     </div>
                 </div>
 
                 <div class="col-lg-12">
                     <div class="portfolio-card">
-                        <h5 class="mb-10">FAQ</h5>
-                        <div class="mb-10"><strong>Vos données sont-elles partagées ?</strong><br>Non. Je travaille uniquement sur vos exports. Aucun accès à vos systèmes.</div>
-                        <div class="mb-10"><strong>Quel format ?</strong><br>Excel/CSV. Si besoin, je vous aide à préparer l’export.</div>
-                        <div><strong>Délais ?</strong><br>48h pour une démo KPI.</div>
+                        <h5 class="mb-10">{{ $portfolio['faq_title'] }}</h5>
+                        @foreach ($portfolio['faq'] as $item)
+                            <div class="mb-10"><strong>{{ $item['q'] }}</strong><br>{{ $item['a'] }}</div>
+                        @endforeach
                     </div>
                 </div>
 
