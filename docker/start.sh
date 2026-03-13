@@ -6,20 +6,35 @@ if [ ! -f .env ]; then
   cp .env.example .env
 fi
 
-mkdir -p database storage/framework/cache storage/framework/sessions storage/framework/views storage/logs
-[ -f database/database.sqlite ] || touch database/database.sqlite
+mkdir -p storage/framework/cache storage/framework/sessions storage/framework/views storage/logs bootstrap/cache
 
-sed -i 's/^APP_ENV=.*/APP_ENV=production/' .env || true
-sed -i 's/^APP_DEBUG=.*/APP_DEBUG=false/' .env || true
-sed -i 's/^DB_CONNECTION=.*/DB_CONNECTION=sqlite/' .env || true
-if grep -q '^DB_DATABASE=' .env; then
-  sed -i 's#^DB_DATABASE=.*#DB_DATABASE=/app/database/database.sqlite#' .env
-else
-  echo 'DB_DATABASE=/app/database/database.sqlite' >> .env
-fi
+set_env() {
+  key="$1"
+  value="$2"
+  if grep -q "^${key}=" .env; then
+    sed -i "s#^${key}=.*#${key}=${value}#" .env
+  else
+    echo "${key}=${value}" >> .env
+  fi
+}
+
+set_env APP_ENV production
+set_env APP_DEBUG false
+set_env APP_URL http://localhost:8000
+set_env DB_CONNECTION mysql
+set_env DB_HOST "${DB_HOST:-mysql}"
+set_env DB_PORT "${DB_PORT:-3306}"
+set_env DB_DATABASE "${DB_DATABASE:-folio}"
+set_env DB_USERNAME "${DB_USERNAME:-root}"
+set_env DB_PASSWORD "${DB_PASSWORD:-root}"
 
 php artisan key:generate --force
-php artisan migrate --force || true
+
+until php artisan migrate --force; do
+  echo 'Waiting for MySQL...'
+  sleep 5
+done
+
 php artisan optimize:clear || true
 
 exec php artisan serve --host=0.0.0.0 --port=8000
