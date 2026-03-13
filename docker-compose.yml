@@ -1,0 +1,12 @@
+services:
+  folios:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: folios-app
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./storage:/app/storage
+      - ./database:/app/database
+    restart: unless-stopped
